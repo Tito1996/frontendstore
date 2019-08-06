@@ -43,8 +43,8 @@ h2{
     text-transform: uppercase;
 }
 
+/** Lista Productos **/
 .lista-productos {
-    margin-top: 40px;
     padding: 0;
     list-style: none;
 }
@@ -54,9 +54,18 @@ h2{
     padding: 20px;
     text-align: center;
 }
+.lista-productos li:nth-child(2n+1){
+    clear: both; /* Hace que solo haya elementos debajo */
+}/* Aplicamos el clera both al elemento 2n+1 */
 @media(min-width:620px){
     .lista-productos li {
         width: 33.3%;
+    }
+    .lista-productos li:nth-child(2n+1){
+        clear: unset; /* Quitamos clear en elementos 2n+1 */
+    }
+    .lista-productos li:nth-child(3n+1){
+        clear: both;
     }
 }
 .lista-productos li img{
@@ -65,4 +74,29 @@ h2{
 }
 .lista-productos li img:hover{
     border: 10px solid rgb(31, 136, 168, 1);
+}
+
+.lista-productos li p{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+span.precio{
+    color: #FFCE00;
+    font-size: 28px;
+}
+
+.boton{
+    background-color: #FFCE00;
+    padding: 10px 30px;
+    margin-top: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: #3700ff;
+    transition: background-color .3s ease-in-out;
+}
+.boton:hover{
+    background-color: #EBBC00; 
 }
